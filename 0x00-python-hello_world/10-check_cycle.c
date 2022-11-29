@@ -8,7 +8,7 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t p1, p2;
+	listint_t *p1, *p2;
 
 	if (list)
 		return (0);
@@ -26,7 +26,11 @@ int check_cycle(listint_t *list)
 	{
 		p2 = p1->next;
 		if (p2 == p1)
+		{
+			free(p1);
+			free(p2);
 			return (1);
+		}
 		p1 = p2;
 	}
 	free(p1);
