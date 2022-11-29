@@ -29,5 +29,7 @@ int check_cycle(list_t *list)
 			return (1);
 		p1 = p2;
 	}
+	free(p1);
+	free(p2);
 	return (0);
 }
