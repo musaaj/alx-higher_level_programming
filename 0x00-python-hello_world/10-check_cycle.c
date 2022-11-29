@@ -25,7 +25,7 @@ int check_cycle(listint_t *list)
 	while (p1)
 	{
 		p2 = p1->next;
-		if (p2 == p1)
+		if (p2->next == p1)
 		{
 			free(p1);
 			free(p2);
