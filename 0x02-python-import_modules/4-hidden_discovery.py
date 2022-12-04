@@ -5,4 +5,4 @@ if (__name__ == '__main__'):
 
     for f in dir(hidden_4):
         if (f[0:2] != '__'):
-            print('{:s}'.format(f[0:2]))
+            print('{:s}'.format(f))
