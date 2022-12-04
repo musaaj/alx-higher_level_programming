@@ -21,7 +21,7 @@ if (__name__ == '__main__'):
         exit()
 
     print('{:d} {:s} {:d} = {:d}'.format(
-        int(argv[1])
-        ,argv[2]
-        ,int(argv[3])
-        ,funcs[op_index](int(argv[1]),int( argv[3]))))
+        int(argv[1]),
+        argv[2],
+        int(argv[3]),
+        funcs[op_index](int(argv[1]), int(argv[3]))))
