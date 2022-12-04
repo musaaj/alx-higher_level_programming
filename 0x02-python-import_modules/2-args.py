@@ -8,7 +8,7 @@ if (__name__ == '__main__'):
     i: int = 1
 
     if (arg_len < 2):
-        info += '.'
+        info += 's.'
     if (arg_len == 2):
         info += ':'
     if (arg_len > 2):
