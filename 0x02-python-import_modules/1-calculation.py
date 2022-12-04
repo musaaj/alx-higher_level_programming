@@ -1,19 +1,16 @@
 #!/usr/bin/python3
-import calculator_1 as calc
 
+if (__name__ == '__main__'):
+    from calculator_1 import add, sub, mul, div
 
-def main():
-    """The main entry of our program
-    """
     a = 10
     b = 5
 
-    print("{0} + {1} = {2}".format(a, b, calc.add(a, b)))
-    print("{0} - {1} = {2}".format(a, b, calc.sub(a, b)))
-    print("{0} * {1} = {2}".format(a, b, calc.mul(a, b)))
-    print("{0} / {1} = {2}".format(a, b, calc.div(a, b)))
+    print('{:d} + {:d} = {:d}'.format(a, b, add(a, b)))
+    print('{:d} - {:d} = {:d}'.format(a, b, sub(a, b)))
+    print('{:d} * {:d} = {:d}'.format(a, b, mul(a, b)))
+    print('{:d} / {:d} = {:d}'.format(a, b, div(a, b)))
 
 
-if (__name__ == "__main__"):
-    main()
+
 
