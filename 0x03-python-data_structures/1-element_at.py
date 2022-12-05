@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):
-    """element_at(my_list) gets an element of a list 
+    """element_at(my_list) gets an element of a list
     object at a specific index
     Args:
         my_list (list): list of containing any data type
