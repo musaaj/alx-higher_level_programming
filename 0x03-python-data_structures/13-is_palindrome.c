@@ -7,12 +7,11 @@
 */
 int is_palindrome(listint_t **head)
 {
-	listint_t *tmp = reverse_list(*head);
+	listint_t *tmp;
 
-	if (!head)
+	if (!(*head))
 		return (1);
-	if (!(*head)->next)
-		return (1);
+	tmp = reverse_list(*head);
 	while (*head && tmp)
 	{
 		if ((*head)->n != tmp->n)
@@ -21,7 +20,6 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 	}
 	return (1);
-	
 }
 
 /**
