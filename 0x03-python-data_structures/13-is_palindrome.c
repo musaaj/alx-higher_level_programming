@@ -9,9 +9,9 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *tmp = reverse_list(*head);
 
-	if (head == NULL)
+	if (!head)
 		return (1);
-	if ((*head)->next == NULL)
+	if (!(*head)->next)
 		return (1);
 	while (*head && tmp)
 	{
@@ -29,9 +29,9 @@ int is_palindrome(listint_t **head)
  * @head: first element of a linked list
  * Return: reversed linked list
  */
-listint_t *reverse_list(*head)
+listint_t *reverse_list(listint_t *head)
 {
-	listint_t *tmp, *ret = NULL, *dtmp;
+	listint_t *tmp, *ret = (void *)0, *dtmp;
 
 	dtmp = head;
 	while (dtmp)
