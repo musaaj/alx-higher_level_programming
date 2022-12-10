@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * check_cycle - check whether there is cylcle in
  * a linked list object
@@ -8,32 +7,21 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *p1, *p2;
+	listint_t *tmp, *tmp2, *tmp3;
 
-	if (list)
-		return (0);
-	p1 = malloc(sizeof(listint_t));
-	if (!p1)
-		return (0);
-	p2 = malloc(sizeof(listint_t));
-	if (!p2)
+	tmp = list;
+	while (tmp->next)
 	{
-		free(p1);
-		return (0);
-	}
-	p1 = list;
-	while (p1)
-	{
-		p2 = (p1->next)->next;
-		if (p2 == p1)
+		tmp2 = tmp;
+		tmp3 = list;
+		while (tmp3->next)
 		{
-			free(p1);
-			free(p2);
-			return (1);
+			if (tmp2 == tmp3->next)
+				return (1);
+			tmp3 = tmp3->next;
 		}
-		p1++;
+		tmp = tmp->next;
+		list = list->next;
 	}
-	free(p1);
-	free(p2);
 	return (0);
 }
