@@ -23,10 +23,10 @@ listint_t *insert_node(listint_t **head, int number)
 			tmp = (*head)->next;
 			(*head)->next = node;
 			node->next = tmp;
-			*head = tmp;
 			return (node);
 		}
 		*head = (*head)->next;
 	}
+	*(head)->next = node;
 	return (node);
 }
