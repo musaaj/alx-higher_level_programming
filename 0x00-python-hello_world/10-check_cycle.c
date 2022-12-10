@@ -24,14 +24,14 @@ int check_cycle(listint_t *list)
 	p1 = list;
 	while (p1)
 	{
-		p2 = p1->next;
+		p2 = (p1->next)->next;
 		if (p2 == p1)
 		{
 			free(p1);
 			free(p2);
 			return (1);
 		}
-		p1 = p2;
+		p1++;
 	}
 	free(p1);
 	free(p2);
