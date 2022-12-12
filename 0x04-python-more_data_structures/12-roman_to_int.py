@@ -77,7 +77,7 @@ def to_int(roman_token = ""):
 
 
 def roman_to_int(roman_string):
-    if (roman_string is str == False):
+    if (roman_string is None):
         return 0
     roman_string += " "
     tokens = tokenize(roman_string)
