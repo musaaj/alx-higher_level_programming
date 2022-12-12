@@ -77,11 +77,9 @@ def to_int(roman_token = ""):
 
 
 def roman_to_int(roman_string):
-    if (roman_string is not str):
+    if (roman_string is str == False):
         return 0
     roman_string += " "
     tokens = tokenize(roman_string)
-    print(tokens)
     arabic_tokens = [to_int(i) for i in tokens]
     return sum(arabic_tokens)
-
