@@ -1,40 +1,40 @@
 #!/usr/bin/python3
 
-def tokenize(roman_string = ""):
-    token:str = ""
-    tokens:str = []
-    size:int = len(roman_string)
-    i:int = 0
+def tokenize(roman_string=""):
+    token: str = ""
+    tokens: str = []
+    size: int = len(roman_string)
+    i: int = 0
 
     while (i < size):
         if (roman_string[i] == "I"):
             token += "I"
             if (roman_string[i + 1] == "V"):
                 token += "V"
-                i += 2;
+                i += 1
             elif (roman_string[i + 1] == "X"):
                 token += "X"
-                i += 2
+                i += 1
         elif (roman_string[i] == "V"):
             token += "V"
         elif (roman_string[i] == "X"):
             token += "X"
             if (roman_string[i + 1] == "C"):
                 token += "C"
-                i += 2
+                i += 1
             elif (roman_string[i + 1] == "L"):
                 token += "L"
-                i += 2
+                i += 1
         elif (roman_string[i] == "L"):
             token += "L"
         elif (roman_string[i] == "C"):
             token += "C"
             if (roman_string[i + 1] == "D"):
                 token += "D"
-                i += 2
+                i += 1
             elif (roman_string[i + 1] == "M"):
                 token += "M"
-                i += 2
+                i += 1
         elif (roman_string[i] == "D"):
             token += "D"
         elif (roman_string[i] == "M"):
@@ -46,7 +46,7 @@ def tokenize(roman_string = ""):
     return tokens
 
 
-def to_int(roman_token = ""):
+def to_int(roman_token=""):
     if (roman_token == "I"):
         return 1
     if (roman_token == "IV"):
@@ -77,7 +77,7 @@ def to_int(roman_token = ""):
 
 
 def roman_to_int(roman_string):
-    if (roman_string is None):
+    if (roman_string is None or type(roman_string) is not str):
         return 0
     roman_string += " "
     tokens = tokenize(roman_string)
