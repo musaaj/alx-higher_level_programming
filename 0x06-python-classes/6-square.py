@@ -7,7 +7,7 @@ This is just another paragraph
 """
 
 
-class Square(object):
+class Square:
     """Class declaration example
 
     Simple class docstring sample
@@ -51,14 +51,14 @@ class Square(object):
         Args:
             value int: must be an integer >= 0
         """
-        if type(value) != int:
+        if isinstance(value, int) is False:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
     @property
-    def position(self, value):
+    def position(self):
         """Getter for position
 
         Returns:
@@ -73,10 +73,10 @@ class Square(object):
         Args:
             value (tuple): must be a tuple of 2 integers
         """
-        if tuple(value) != tuple\
+        if isinstance(value, tuple) is False\
                 or len(value) != 2\
-                or type(value[0]) != int\
-                or type(value[1]) != int\
+                or isinstance(value[0], int) is False\
+                or isinstance(value[1], int) is False\
                 or value[0] < 0\
                 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
