@@ -8,4 +8,3 @@ class Square(object):
     
     I tell you the class does nothing
     """
-    pass
