@@ -3,7 +3,7 @@
 """Simple python module that does
 absolutely nothing
 """
-class Square(object):
+class Square:
     """Class declaration example
     
     I tell you the class does nothing
