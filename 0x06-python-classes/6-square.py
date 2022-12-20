@@ -73,7 +73,7 @@ class Square(object):
         Args:
             value (tuple): must be a tuple of 2 integers
         """
-        if tupe(value) != tuple\
+        if tuple(value) != tuple\
                 or len(value) != 2\
                 or type(value[0]) != int\
                 or type(value[1]) != int\
