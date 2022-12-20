@@ -64,5 +64,8 @@ class Square(object):
 
         just prints square
         """
+        if self.__size == 0:
+            print()
+            return
         for i in range(self.__size):
             print('#' * self.__size)
