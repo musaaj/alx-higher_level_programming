@@ -61,6 +61,8 @@ class Square(object):
 
     def my_print(self):
         """prints square to stdout
+
+        just prints square
         """
         for i in range(self.__size):
             print('#' * self.__size)
