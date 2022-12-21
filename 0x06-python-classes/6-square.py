@@ -94,11 +94,9 @@ class Square:
 
         just prints square
         """
+        print()
         if self.__size == 0:
-            print()
             return
-        for i in self.__position:
-            print()
         for i in range(self.__size):
             print(' ' * self.__position[0], end='')
             print('#' * self.__size)
