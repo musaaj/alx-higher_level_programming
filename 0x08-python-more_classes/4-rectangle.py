@@ -10,6 +10,7 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """constructor method
+
         Args:
             width: must be an unsigned int
             height: must be an unsigned int
@@ -25,9 +26,28 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    def __str__(self):
+        """Returns printed instance of Rectangle"""
+        s = ''
+        if self.width == 0 or self.height == 0:
+            return s
+        width = self.width
+        height = self.height
+        while height > 0:
+            s += '#' * width
+            if height > 1:
+                s += '\n'
+            height -= 1
+        return s
+
+    def __repr__(self):
+        """Returns string rep of Rectangle instance"""
+        return 'Rectange({}, {})'.format(self.width, self.height)
+
     @property
     def width(self):
         """width getter
+
         Return: unsigned int
         """
         return self._width
@@ -35,6 +55,7 @@ class Rectangle:
     @property
     def height(self):
         """height getter
+
         Return: unsigned int
         """
         return self._height
@@ -42,6 +63,7 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """width setter
+
         Args:
             value: unsigned int
         """
@@ -54,6 +76,7 @@ class Rectangle:
     @height.setter
     def height(self, value):
         """height getter
+
         Args:
             value: unsigned int
         """
@@ -62,3 +85,21 @@ class Rectangle:
         if value < 0:
             raise ValueError('height must be >= 0')
         self._height = value
+
+    def area(self):
+        """find area of a rectangle instance
+
+        Return: unsigned int
+        """
+        if self._width == 0 or self._height == 0:
+            return 0
+        return self._width * self._height
+
+    def perimeter(self):
+        """find perimeter of a rectangle instance
+
+        Return: unsigned int
+        """
+        if self._width == 0 or self._height == 0:
+            return 0
+        return 2 * self._width + 2 * self._height
