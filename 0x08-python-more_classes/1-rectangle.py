@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Simple Module"""
+"""Simple Module
+
+The triangle module is just for practice
+"""
 
 
 class Rectangle:
