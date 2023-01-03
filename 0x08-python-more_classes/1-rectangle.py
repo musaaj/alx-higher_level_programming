@@ -15,11 +15,11 @@ class Rectangle:
             width: must be an unsigned int
             height: must be an unsigned int
         """
-        if not isintance(width, int):
+        if not isinstance(width, int):
             raise TypeError('width must be an integer')
         if width < 0:
             raise ValueError('width must be >= 0')
-        if not isintance(height, int):
+        if not isinstance(height, int):
             raise TypeError('height must be an integer')
         if height < 0:
             raise ValueError('height must be >= 0')
@@ -49,11 +49,11 @@ class Rectangle:
         Args:
             value: unsigned int
         """
-        if not isintance(value, int):
+        if not isinstance(value, int):
             raise TypeError('width must be an integer')
         if value < 0:
             raise ValueError('width must be >= 0')
-        self.width = value
+        self._width = value
 
     @height.setter
     def height(self, value):
@@ -62,8 +62,8 @@ class Rectangle:
         Args:
             value: unsigned int
         """
-        if not isintance(value, int):
+        if not isinstance(value, int):
             raise TypeError('height must be an integer')
         if value < 0:
             raise ValueError('height must be >= 0')
-        self.height = value
+        self._height = value
