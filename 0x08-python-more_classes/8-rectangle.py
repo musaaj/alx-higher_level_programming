@@ -101,16 +101,16 @@ class Rectangle:
         """
         if self._width == 0 or self._height == 0:
             return 0
-        return self._width * self._height
+        return self.width * self.height
 
     def perimeter(self):
         """find perimeter of a rectangle instance
 
         Return: unsigned int
         """
-        if self._width == 0 or self._height == 0:
+        if self.width == 0 or self.height == 0:
             return 0
-        return 2 * self._width + 2 * self._height
+        return 2 * self.width + 2 * self.height
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
