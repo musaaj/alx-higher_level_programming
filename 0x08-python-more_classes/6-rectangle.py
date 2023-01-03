@@ -26,7 +26,7 @@ class Rectangle:
             raise ValueError('height must be >= 0')
         self.width = width
         self.height = height
-        number_of_instances += 1
+        self.number_of_instances += 1
 
     def __str__(self):
         """Returns printed instance of Rectangle"""
