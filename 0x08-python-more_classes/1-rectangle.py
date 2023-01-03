@@ -10,15 +10,16 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """constructor method
+
         Args:
             width: must be an unsigned int
             height: must be an unsigned int
         """
-        if type(width) is not int:
+        if not isintance(width, int):
             raise TypeError('width must be an integer')
         if width < 0:
             raise ValueError('width must be >= 0')
-        if type(height) is not int:
+        if not isintance(height, int):
             raise TypeError('height must be an integer')
         if height < 0:
             raise ValueError('height must be >= 0')
@@ -28,6 +29,7 @@ class Rectangle:
     @property
     def width(self):
         """width getter
+
         Return: unsigned int
         """
         return self._width
@@ -35,6 +37,7 @@ class Rectangle:
     @property
     def height(self):
         """height getter
+
         Return: unsigned int
         """
         return self._height
@@ -42,23 +45,25 @@ class Rectangle:
     @width.setter
     def width(self, value):
         """width setter
+
         Args:
             value: unsigned int
         """
-        if type(value) is not int:
+        if not isintance(value, int):
             raise TypeError('width must be an integer')
         if value < 0:
             raise ValueError('width must be >= 0')
-        self._width = value
+        self.width = value
 
     @height.setter
     def height(self, value):
         """height getter
+
         Args:
             value: unsigned int
         """
-        if type(value) is not int:
+        if not isintance(value, int):
             raise TypeError('height must be an integer')
         if value < 0:
             raise ValueError('height must be >= 0')
-        self._height = value
+        self.height = value
