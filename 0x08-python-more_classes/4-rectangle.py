@@ -42,7 +42,7 @@ class Rectangle:
 
     def __repr__(self):
         """Returns string rep of Rectangle instance"""
-        return 'Rectange({}, {})'.format(self.width, self.height)
+        return 'Rectangle({}, {})'.format(self.width, self.height)
 
     @property
     def width(self):
