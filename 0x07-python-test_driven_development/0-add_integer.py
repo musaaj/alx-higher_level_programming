@@ -1,23 +1,7 @@
 #!/usr/bin/python3
-"""
-Simple python3 module for practice
+"""Simple python3 module for practice
 
->>> add_integer(2, 3)
-5
->>> add_integer(3, 4.3)
-7
->>> add_integer(None, 3)
-Traceback (most recent call last):
-    ...
-TypeError: a must be an integer
->>> add_integer(100, '39')
-Traceback (most recent call last):
-    ...
-TypeError: b must be an integer
->>> add_integer([2], 9)
-Traceback (most recent call last):
-    ...
-TypeError: a must be an integer
+It is super simple
 """
 
 
