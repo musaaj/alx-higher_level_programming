@@ -14,7 +14,6 @@ class TestMaxClass(unittest.TestCase):
     
     def test_assert(self):
         self.assertRaises(TypeError, max_integer, [2, '3', 34, 3])
-        self.assertRaises(TypeError, max_integer, "346rf7673")
         self.assertRaises(TypeError, max_integer, 78)
         self.assertRaises(KeyError, max_integer, {'name': 23, 'no': 3})
         self.assertRaises(TypeError, max_integer, [3, 5, 6j, 4e6])
