@@ -10,4 +10,4 @@ def lookup(obj):
 
     Return: list of @obj attributes
     """
-    return sorted(obj.__dir__(1))
+    return dir(obj)
