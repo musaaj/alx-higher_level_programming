@@ -10,4 +10,4 @@ def read_file(filename=""):
     """
     with open(filename, 'r') as fp:
         for line in fp:
-            print('{}'.format(line))
+            print('{}'.format(line), end='')
