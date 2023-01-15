@@ -7,7 +7,7 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 def main():
     """main entry"""
-    with open('add_item.json', 'r') as fp:
+    with open('add_item.json', 'r+') as fp:
         rd = fp.read()
         fp.close()
     if len(rd) == 0:
