@@ -7,8 +7,13 @@ import sys
 
 def main():
     """main entry"""
-    with open('add_item.json', 'a') as fp:
+    with open('add_item.json', 'r') as fp:
+        rd = fp.read()
         fp.close()
+    if len(rd) == 0:
+        with open('add_item.json', 'w') as fp:
+            fp.write('[]')
+            fp.close()
     my_list = load_from_json_file('add_item.json')
     my_list.extend(sys.argv[1:])
     save_to_json_file(my_list, 'add_item.json')
