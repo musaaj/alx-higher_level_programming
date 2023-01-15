@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """write or append to text file"""
 
 
