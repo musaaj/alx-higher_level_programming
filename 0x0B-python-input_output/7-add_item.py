@@ -7,10 +7,11 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 def main():
     """main entry"""
-    with open('add_item.json', 'a+') as fp:
-        rd = fp.read()
-        fp.close()
-    if len(rd) == 0:
+    try:
+        with open('add_item.json', 'r') as fp:
+            rd = fp.read()
+            fp.close()
+    except FileNotFoundError:
         with open('add_item.json', 'w') as fp:
             fp.write('[]')
             fp.close()
