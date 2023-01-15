@@ -1,0 +1,13 @@
+#!/usr/bin/python2
+"""Write string to file"""
+
+
+def write_file(filename="", text=""):
+    """write a string to file
+
+    Args:
+        filename: string
+        text: string
+    """
+    with open(filename, 'w') as fp:
+        fp.write(text)
