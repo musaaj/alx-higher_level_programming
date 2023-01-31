@@ -30,7 +30,7 @@ class Student:
 
         Return: dictionary reps of self
         """
-        if not attrs:
+        if attrs is None:
             return vars(self)
         object_attrs = {}
         attributes = vars(self)
