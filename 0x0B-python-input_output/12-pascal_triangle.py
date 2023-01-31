@@ -3,6 +3,7 @@
 generate pascal triangle
 """
 
+
 def pascal_triangle(n):
     """generate pascal triangle from aa given input
 
