@@ -35,5 +35,6 @@ class Student:
         object_attrs = {}
         attributes = vars(self)
         for field in attrs:
-            object_attrs[field] = attributes[field]
+            if field in attributes:
+                object_attrs[field] = attributes[field]
         return object_attrs
