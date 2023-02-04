@@ -124,12 +124,12 @@ class Rectangle(models.base.Base):
 
     def __str__(self):
         """str method"""
-        rectangle_str = '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id
-                    ,self.__x
-                    ,self.__y
-                    ,self.__width
-                    ,self.__height
-                    )
+        rectangle_str = '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id,
+                                                                self.__x,
+                                                                self.__y,
+                                                                self.__width,
+                                                                self.__height
+                                                                )
         return rectangle_str
 
     def area(self):
