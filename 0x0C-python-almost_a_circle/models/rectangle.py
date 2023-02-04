@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Rectangle Module"""
-from base import Base
+import models.base
 
 
-class Rectangle(Base):
+class Rectangle(models.base.Base):
     """Rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
