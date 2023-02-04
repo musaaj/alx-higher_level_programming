@@ -125,3 +125,8 @@ class Rectangle(models.base.Base):
     def area(self):
         """get area of this rectangle"""
         return self.__width * self.__height
+
+    def display(self):
+        """print this rectangle"""
+        for i in range(self.__height):
+            print('#' * self.__width)
