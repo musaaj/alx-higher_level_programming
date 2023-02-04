@@ -138,5 +138,7 @@ class Rectangle(models.base.Base):
 
     def display(self):
         """print this rectangle"""
+        for i in range(self.__y):
+            print('\n')
         for i in range(self.__height):
-            print('#' * self.__width)
+            print('{}{}'.format(' ' * self.__x, '#' * self.__width))
