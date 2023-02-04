@@ -122,6 +122,16 @@ class Rectangle(models.base.Base):
             raise ValueError('y must be >= 0')
         self.__y = value
 
+        def __str__(self):
+            """str method"""
+            rectangle_str = '[Rectangle] ({}) {}/{} {}/{}'.format(self.id
+                        ,self.__x
+                        ,self.__y
+                        ,self.__width
+                        ,self.__height
+                        )
+            return rectangle_str
+
     def area(self):
         """get area of this rectangle"""
         return self.__width * self.__height
