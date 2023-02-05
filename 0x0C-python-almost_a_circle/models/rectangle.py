@@ -142,3 +142,33 @@ class Rectangle(models.base.Base):
             print('')
         for i in range(self.__height):
             print('{}{}'.format(' ' * self.__x, '#' * self.__width))
+
+    def update(self, *args, **kwargs):
+        """update fields of this objects
+
+        Args:
+            args: variable list arguments
+            *kwargs: variable key-value arguments
+        """
+        args_len = len(args)
+        if not args_len:
+            if kwargs.get('id', ''):
+                self.id = kwargs.get('id')
+            if kwargs.get('width', ''):
+                self.__width = kwargs.get('width')
+            if kwargs.get('height', ''):
+                self.__height = kwargs.get('height')
+            if kwargs.get('x', ''):
+                self.__x = kwargs.get('x')
+            if kwargs.get('y', ''):
+                self.__y = kwargs.get('y')
+        if args_len:
+            self.id = args[0]
+        if args_len > 1:
+            self.__width = args[1]
+        if args_len > 2:
+            self.__height = args[2]
+        if args_len > 3:
+            self.__x = args[3]
+        if args_len > 4:
+            self.__y = args[4]
