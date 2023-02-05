@@ -38,4 +38,21 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """update my fields"""
-        super().update(*args, **kwargs)
+        args_len = len(args)
+        if not args_len:
+            if kwargs.get('id', ''):
+                self.id = kwargs.get('id')
+            if kwargs.get('size', ''):
+                self.size = kwargs.get('size')
+            if kwargs.get('x', ''):
+                self.x = kwargs.get('x')
+            if kwargs.get('y', ''):
+                self.y = kwargs.get('y')
+        if args_len:
+            self.id = args[0]
+        if args_len > 1:
+            self.size = args[1]
+        if args_len > 2:
+            self.x = args[2]
+        if args_len > 3:
+            self.y = args[3]
