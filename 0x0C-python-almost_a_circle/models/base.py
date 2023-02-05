@@ -49,7 +49,6 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """create object of type"""
-        dummy = cls()
         if cls.__name__ == 'Rectangle':
             dummy = cls(1, 1)
         if cls.__name__ == 'Square':
