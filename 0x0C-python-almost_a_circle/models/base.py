@@ -49,5 +49,5 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """create object of type"""
-        obj = cls.__init__(cls)
-        obj.update(**dictionary)
+        obj = Base()
+        obj.update(dictionary)
