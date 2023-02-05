@@ -31,8 +31,8 @@ class Base:
         """save list of objects to file"""
         json_of_obj_list = '[]'
         if list_objs:
-            json_of_obj_list = Base.to_json_string(
-                        [object.to_dictionary for object in list_objs]
+            json_of_obj_list = cls.to_json_string(
+                        [object.to_dictionary() for object in list_objs]
                     )
         filename = '{}.json'.format(cls.__name__)
         with open(filename, 'w') as fp:
