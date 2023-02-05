@@ -172,3 +172,13 @@ class Rectangle(models.base.Base):
             self.__x = args[3]
         if args_len > 4:
             self.__y = args[4]
+
+    def to_dictionary(self):
+        """get dictionary representation of this object"""
+        return {
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y
+                }
