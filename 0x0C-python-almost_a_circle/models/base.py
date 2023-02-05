@@ -49,5 +49,11 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """create object of type"""
-        obj = Base()
-        obj.update(dictionary)
+        object = cls()
+        if cls.__name__ == 'Rectangle':
+            object = cls(1, 1)
+        if cls.__name__ == 'Square':
+            object = cls(1)
+        object.update(dictionary)
+        return object
+
