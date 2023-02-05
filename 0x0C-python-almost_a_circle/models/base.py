@@ -38,3 +38,10 @@ class Base:
         with open(filename, 'w') as fp:
             fp.write(json_of_obj_list)
             fp.close()
+
+    @staticmethod
+    def from_json_string(json_string):
+        """string to objects"""
+        if not json_string:
+            return []
+        return json.loads(json_string)
