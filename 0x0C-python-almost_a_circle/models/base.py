@@ -55,4 +55,3 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
-
