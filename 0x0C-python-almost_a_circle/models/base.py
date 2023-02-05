@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """main base class"""
 import json
+import csv
 
 
 class Base:
@@ -64,5 +65,55 @@ class Base:
                 objects_dict = cls.from_json_string(fp.read())
                 fp.close()
             return [cls.create(**item) for item in objects_dict]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """serialize and save objects to csv file"""
+        csv_contents = []
+        with open(f'{cls.__name__}.csv', 'w') as fp:
+            if list_objs:
+                for obj in list_objs:
+                    if cls.__name__ == 'Rectangle':
+                        csv_contents.append(
+                                    [
+                                      obj.id,
+                                      obj.width,
+                                      obj.height,
+                                      obj.x,
+                                      obj.y
+                                    ]
+                                )
+                    if cls.__name__ == 'Square':
+                        csv_contents.append(
+                                    [
+                                      obj.id,
+                                      obj.size,
+                                      obj.x,
+                                      obj.y
+                                    ]
+                                )
+            writer = csv.writer(fp)
+            for row in csv_contents:
+                writer.writerow(row)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """load objects from csv file"""
+        list_objs = []
+        try:
+            with open(f'{cls.__name__}.csv', 'r', newline='') as fp:
+                reader = csv.reader(fp)
+                for row in reader:
+                    if cls.__name__ == 'Rectangle':
+                        obj = cls(1, 1)
+                        obj.update(*[int(i) for i in row])
+                        list_objs.append(obj)
+                    if cls.__name__ == 'Square':
+                        obj = cls(1)
+                        obj.update(*[int(i) for i in row])
+                        list_objs.append(obj)
+            return list_objs
         except FileNotFoundError:
             return []
