@@ -63,6 +63,6 @@ class Base:
             with open(f'{cls.__name__}.json', 'r') as fp:
                 objects_dict = json.load(fp)
                 fp.close()
-            return [cls.create(item) for item in objects_dict]
+            return [cls.create(**item) for item in objects_dict]
         except FileNotFoundError:
             return []
