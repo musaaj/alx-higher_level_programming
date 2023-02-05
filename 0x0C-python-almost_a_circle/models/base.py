@@ -61,7 +61,7 @@ class Base:
         """load objects from file"""
         try:
             with open(f'{cls.__name__}.json', 'r') as fp:
-                objects_dict = json.load(fp)
+                objects_dict = cls.from_json_string(fp.read())
                 fp.close()
             return [cls.create(**item) for item in objects_dict]
         except FileNotFoundError:
