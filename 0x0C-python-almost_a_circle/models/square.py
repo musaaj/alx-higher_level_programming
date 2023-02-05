@@ -56,3 +56,12 @@ class Square(Rectangle):
             self.x = args[2]
         if args_len > 3:
             self.y = args[3]
+
+    def to_dictionary(self):
+        """get the dictionary representation of this object"""
+        return {
+                'id': self.id,
+                'size': self.size,
+                'x': self.x,
+                'y': self.y
+                }
