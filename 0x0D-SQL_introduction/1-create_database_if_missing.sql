@@ -1,2 +1,1 @@
--- create new database
-CREATE  DATABASE IF NOT EXISTS mydatabase
+CREATE database IF NOT EXISTS mydatabase
