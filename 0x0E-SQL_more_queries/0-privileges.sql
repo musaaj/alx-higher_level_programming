@@ -1,3 +1,3 @@
 -- show user info 
- DESC user_0d_1; 
- DESC user_0d_2;
+ SHOW GRANT user_0d_1; 
+ SHOW GRANT user_0d_2;
